@@ -12,3 +12,10 @@ inoremap <S-Down> <Esc>:m+<CR>
 
 " fix del button
 set backspace=indent,eol,start
+
+" tab size
+set tabstop=2 
+set softtabstop=2 
+set expandtab 
+set shiftwidth=2 
+set smarttab
