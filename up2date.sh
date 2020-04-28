@@ -41,10 +41,19 @@ mkdir -p $LOGDIR
 touch $LOG
 
 # Brew
+
 echo "${PURPLE}Brew Update${NC}" | tee -a $LOG
 brew update | tee -a $LOG && 
 echo "${PURPLE}Brew Upgrade${NC}" | tee -a $LOG
 brew upgrade | tee -a $LOG
+
+# Brew cask
+
+echo "${PURPLE}Brew Upgrade Cask${NC}" | tee -a $LOG
+brew upgrade cask | tee -a $LOG
+echo "${PURPLE}Brew Cask Upgrade${NC}" | tee -a $LOG
+brew cask upgrade | tee -a $LOG
+
 
 #oh-my-zsh
 echo "${PURPLE}oh-my-zsh${NC}" | tee -a $LOG
