@@ -23,7 +23,7 @@ NC='\033[0m' # No Color
 
 # Variables
 
-HOMEDIR=/Users/kl/
+HOMEDIR=/Users/sk4lf/
 ZSHDIR=$HOMEDIR/.oh-my-zsh/
 LOGDIR=$HOMEDIR/log/
 LOGFILE=up2date.sh.log
@@ -50,11 +50,11 @@ brew upgrade | tee -a $LOG
 # Brew cask
 
 echo "${PURPLE}Brew Upgrade Cask${NC}" | tee -a $LOG
-brew upgrade cask | tee -a $LOG
-echo "${PURPLE}Brew Cask Upgrade${NC}" | tee -a $LOG
-brew cask upgrade | tee -a $LOG
+brew upgrade --cask | tee -a $LOG
+brew upgrade --cask --greedy | tee -a $LOG
 
 
 #oh-my-zsh
-echo "${PURPLE}oh-my-zsh${NC}" | tee -a $LOG
-sh $ZSHDIR/tools/upgrade.sh | tee -a $LOG
+#removed because using fish now
+#echo "${PURPLE}oh-my-zsh${NC}" | tee -a $LOG
+#sh $ZSHDIR/tools/upgrade.sh | tee -a $LOG
